@@ -1,27 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities{
+    .btn_green
+    {
+        @apply border-green-500 bg-green-500 px-4 md:w-[60%] py-5 w-full text-white rounded-full;
+    }
+    .btn_black{
+        @apply bg-black/80 hover:bg-black rounded-full text-white h-[12vh]  w-fit px-12  py-2;
+    }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+}   
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hide-scrollbar::-webkit-scrollbar{
+    display: none;
 }
